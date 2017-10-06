@@ -1,4 +1,4 @@
-#include "textured_quad_display.h"
+#include "./textured_quad_display.h"
 
 #include <cv_bridge/cv_bridge.h>
 #include <OgreSceneManager.h>
@@ -8,6 +8,7 @@
 
 #include <algorithm>
 #include <string>
+#include <vector>
 
 // TexturedQuad
 
@@ -402,16 +403,16 @@ TexturedQuadDisplay::TexturedQuadDisplay() :
         "textured_quad",
         QString::fromStdString(
                 ros::message_traits::datatype<rviz_textured_quad::TexturedQuad>()),
-        "map_annotation/TexturedQuad topic to subscribe to. <topic>_array will "
+        "rviz_textured_quad/TexturedQuad topic to subscribe to. <topic>_array will "
         "also automatically be subscribed with type "
-        "map_annotation/TexturedQuadArray.",
+        "rviz_textured_quad/TexturedQuadArray.",
         this,
         SLOT(updateTopic()));
 
     queue_size_property_ = new rviz::IntProperty(
         "Queue Size",
         100,
-        "Set the size of the incoming map_annotation/TexturedQuad message "
+        "Set the size of the incoming rviz_textured_quad/TexturedQuad message "
         "queue.",
         this, SLOT(updateQueueSize()));
     queue_size_property_->setMin(0);

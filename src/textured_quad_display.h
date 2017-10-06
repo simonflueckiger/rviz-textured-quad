@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SRC_TEXTURED_QUAD_DISPLAY_H
+#define SRC_TEXTURED_QUAD_DISPLAY_H
 
 #include <message_filters/subscriber.h>
 #include <OgreMaterial.h>
@@ -91,6 +92,7 @@ typedef boost::shared_ptr<TexturedQuad> TexturedQuadPtr;
 
 class TexturedQuadDisplay : public rviz::Display {
 Q_OBJECT
+
 public:
     TexturedQuadDisplay();
     virtual ~TexturedQuadDisplay();
@@ -160,3 +162,5 @@ private:
 
     friend TexturedQuad;
 };
+
+#endif  // SRC_TEXTURED_QUAD_DISPLAY_H
