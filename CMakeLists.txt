@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rviz
   roslint
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -63,6 +64,7 @@ catkin_package(
 #  LIBRARIES rviz_textured_quad
 #  CATKIN_DEPENDS roscpp rviz
 #  DEPENDS system_lib
+  CATKIN_DEPENDS message_runtime
 )
 
 ###########
